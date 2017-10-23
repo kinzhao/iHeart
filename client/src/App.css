@@ -1,0 +1,74 @@
+    html,
+body,
+#root {
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3 {
+    font-weight: 300;
+}
+
+.header-title {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5aadbb;
+}
+
+.stations-container {
+    margin: 0 auto;
+}
+
+.stations-container .station-container .image-container {
+    max-width: 250px;
+    border: 1px ridge #F5F5F5;
+}
+
+@media screen and (max-width: 416px) {
+    .stations-container .station-container .image-container {
+        height: 139px;
+    }
+}
+
+@media screen and (min-width: 417px) and (max-width: 549px) {
+    .stations-container .station-container .image-container {
+        height: 185px;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 768px) {
+    .stations-container .station-container .image-container {
+        height: 248px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .stations-container {
+        max-width: 518px;
+    }
+    .stations-container .station-container {
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .stations-container {
+        width: 750px;
+    }
+    .stations-container .station-container {
+        width: 32%;
+    }  .stations-container .station-container .image-container {
+        max-height: 240px;
+    }
+}
