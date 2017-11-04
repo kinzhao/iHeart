@@ -7,29 +7,26 @@ var axios = require('axios');
 router.get('/', function(req, res, next) {
 
     const query = req.baseUrl.replace('/search/', '');
-    const temp  = [];
+    const temp = [];
 
     axios.get('https://us.api.iheart.com/api/v1/catalog/searchAll', {
-      params: {
-        keywords: query
-      }
+        params: {
+            keywords: query
+        }
     })
     .then((response) => {
-      const trackList = response.data.trackBundles.slice(0, 6);
-
-      trackList.map((track) => {
-        if(track){
-         temp.push({
-            key         : track.artist.toLowerCase().replace(' ', '-'),
-            imagePath   : track.imagePath,
-            description : track.artist
-          });
-        }
-        return temp;
-
-      });
-      res.json( temp );
-
+        const trackList = response.data.trackBundles.slice(0, 6);
+        trackList.map((track) => {
+            if (track) {
+                temp.push({
+                    key: track.artist.toLowerCase().replace(' ', '-'),
+                    imagePath: track.imagePath,
+                    description: track.artist
+                });
+            }
+            return temp;
+        });
+        res.json(temp);
     })
     .catch((error) => console.log(error));
 

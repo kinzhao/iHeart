@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 const styles = {
   singer: {
@@ -27,14 +27,16 @@ export class Singer extends Component {
   render() {
     return (
       <div className="station-container">
-        <div className="image-container" style={styles.singer}>
-          <img className="img-responsive" style={styles.image} src={this.props.singer.imagePath} alt={this.props.singer.name}/>
+        <div className="image-container" style={ styles.singer }>
+          <img className="img-responsive" style={ styles.image } src={ this.props.singer.imagePath } alt={ this.props.singer.name } />
         </div>
-        <div className="station-text" style={styles.stationText}>
-          <h3 className="name" style={styles.h3}>
-            {this.props.singer.name}
+        <div className="station-text" style={ styles.stationText }>
+          <h3 className="name" style={ styles.h3 }>
+          { this.props.singer.name }
           </h3>
-          <p className="description" style={styles.description}>{this.props.singer.description}</p>
+          <p className="description" style={ styles.description }>
+            { this.props.singer.description }
+          </p>
         </div>
       </div>
     );

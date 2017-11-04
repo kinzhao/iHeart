@@ -1,4 +1,4 @@
-    html,
+html,
 body,
 #root {
     margin: 0;
@@ -68,7 +68,8 @@ a:hover {
     }
     .stations-container .station-container {
         width: 32%;
-    }  .stations-container .station-container .image-container {
+    }
+    .stations-container .station-container .image-container {
         max-height: 240px;
     }
 }
